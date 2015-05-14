@@ -20,6 +20,8 @@ fi
 # install latest build tools updates from RDO repo
 yum install -y --nogpg python-pip python-pbr python-setuptools
 
+/scripts/repos.sh
+
 # If in dev mode the user might not be building all of the packages, so we need
 # to add the current upstream repository in order to have access to current dependencies
 if [ "$DELOREAN_DEV" == "1" ] ; then
